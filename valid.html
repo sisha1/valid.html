@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript form validation - checking email</title>
+    <link rel="stylesheet" href="form-style.css" type="text/css" />
+  </head>
+
+  <body onload="document.form1.text1.focus()">
+    <div class="mail">      
+      <form>
+        <ul>
+          <h2>Email</h2>
+          <li><input type="text" name="text1" id="a"/></li><br>
+          <li>&nbsp;</li>                  
+          <h2>Password</h2><br>
+          <li><input type="password" name="text2" id="b"/></li><br>
+           <li>&nbsp;</li>
+        </ul>
+        <ul>
+           <li class="submit">
+           <button onclick="ValidateEmail()">submit</button>
+           </li>        
+          <li>&nbsp;</li>
+        </ul>
+      </form>
+    </div>
+    <script>
+      function ValidateEmail() 
+         {
+          
+              var a=document.getElementById('a').value;
+              var b=document.getElementById('b').value;
+              var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(jinnss.com)$/;
+            if (a.match(mailformat) && b=="Tech.temp@123") 
+                  {
+                    window.open('fetch.html','_blank');
+                 } 
+            else {
+                    alert("You have entered an invalid email address or password!");  
+                 }
+           }
+  </script> 
+  </body>
+</html>
+
+
+
